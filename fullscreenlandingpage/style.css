@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+/* HEADER */
+#showcase {
+	background-image: url(https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0 20px;
+}
+
+#showcase h1 {
+	text-transform: uppercase;
+	font-size: 40px;
+	color: #ecf0f1;
+}
+
+#showcase p {
+	font-size: 20px;
+	color: #ecf0f1;
+	width: 80%;
+}
+
+#showcase .btn {
+	color: #ecf0f1;
+	text-decoration: none;
+	font-size: 18px;
+	border: 2px solid #ecf0f1;
+	padding: 5px 15px;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+
+#showcase .btn:hover {
+	background-color: #a81e8c;
+}
+
+/* SECTION */
+#section-a {
+	background-color: #22c2d0;
+	color: #ecf0f1;
+	padding: 20px;
+	text-align: center;
+}
+
+#section-b {
+	background-color: #e95e37;
+	color: #ecf0f1;
+	padding: 20px;
+	text-align: center;
+}
+
+#section-c {
+	display: flex;
+}
+
+#section-c div {
+	padding: 20px;
+	text-align: center;
+}
+
+/* BOX 1 */
+#section-c .box-1 {
+	background-color: #b45c3d;
+	color: #ecf0f1;
+}
+
+#section-c .box-1:hover {
+	background-color: #d59882;
+}
+
+/* BOX 2 */
+#section-c .box-2 {
+	background-color: #791865;
+	color: #ecf0f1;
+}
+
+#section-c .box-2:hover {
+	background-color: #ce29ac;
+}
+
+/* BOX 3 */
+#section-c .box-3 {
+	background-color: #441B80;
+	color: #ecf0f1;
+}
+
+#section-c .box-3:hover {
+	background-color: #692ac6;
+}
