@@ -1,0 +1,16 @@
+body {
+    background-color: #fab1a0;
+    margin: 0;
+    height: 100vh;
+    /* TO CENTER .status WITHIN BODY */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status {
+    padding: 20px 40px;
+    font-family: Helvetica;
+    color: #fff;
+    letter-spacing: 1px;
+}
