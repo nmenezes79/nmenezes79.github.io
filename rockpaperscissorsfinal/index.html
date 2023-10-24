@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rock Paper Scissors</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+	<div class="container-fluid bg ">
+		<h1 class="text-center h">Rock Paper Scissors</h1>
+		<div class="row ">
+			<div id="first" class="col-md-4 text-center">
+				<img onclick="rock()" class="img"
+					src="https://github.com/Ashish1322/rockPaperScisor/blob/master/rock1.png?raw=true" width="300" alt="">
+			</div>
+			<div id="second" class="col-md-4 text-center">
+				<img onclick="paper()" class="img"
+					src="https://github.com/Ashish1322/rockPaperScisor/blob/master/paper1.png?raw=true" width="300" alt="">
+
+			</div>
+			<div id="third" class="col-md-4 text-center">
+				<img onclick="scisor()" class="img"
+					src="https://github.com/Ashish1322/rockPaperScisor/blob/master/scissor1.png?raw=true" width="300" alt="">
+			</div>
+		</div>
+
+		<div class="mx-auto">
+			<button onclick="reset()" class="btn btn-warning"> Play Again</button>
+		</div>
+	</div>
+
+	<!--The Comment Section:In Third level we can ask them to add the audio links-->
+
+	<audio id="loose">
+		<source src=https://github.com/Ashish1322/rockPaperScisor/blob/master/sounds/aww.mp3?raw=true/>
+	</audio>
+
+	<audio id="win">
+		<source src=https://github.com/Ashish1322/rockPaperScisor/blob/master/sounds/cash.mp3?raw=true/>
+	</audio>
+
+	<audio id="cardput">
+		<source src=https://github.com/Ashish1322/rockPaperScisor/blob/master/sounds/swish.m4a?raw=true />
+	</audio>
+
+	<!--Add the external JS file by using the script tag.
+
+	1. Add external javascript file using this syntax:
+	<script src=“filename”></script> -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+
+		<script src="script.js"></script>
+</body>
+</html>

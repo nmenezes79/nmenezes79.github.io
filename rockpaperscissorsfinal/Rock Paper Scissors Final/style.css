@@ -1,0 +1,24 @@
+.bg {
+	background: radial-gradient(orange, yellow);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+}
+
+.h {
+	text-align: center;
+	font-family: cursive;
+	font-size: 55px;
+	text-shadow: 2px 2px 5px black;
+
+}
+
+.ans {
+	text-align: center;
+	color: red;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 38px;
+	text-shadow: 2px 2px 5px black;
+}
