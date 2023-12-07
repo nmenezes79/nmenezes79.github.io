@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Access Last Item</title>
+
+	<style>
+		body {
+			background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+			height: 100vh;
+			color: #fdeff9;
+			font-family: sans-serif;
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Access Last Item</h1>
+
+	<p>To access the last item of an array deduct 1 from its length</p>
+
+	<p id="demo"></p>
+
+	<script>
+		// LENGTH OF ARRAY
+		var cities = ["Denver", "Madrid", "Berlin", "Tokyo", "Rio"];
+		var lastItem = cities[cities.length - 1]
+		document.getElementById('demo').innerHTML = "Output: " + lastItem;
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Access Array</title>
+
+	<style>
+		body {
+			background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+			height: 100vh;
+			color: #fdeff9;
+			font-family: sans-serif;
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Access Array</h1>
+
+	<p>Arrays items are accessed using integers.</p>
+
+	<p>Arrays are zero-indexed.</p>
+
+	<p>This means the count starts from 0, not from 1.</p>
+
+	<p id="demo"></p>
+
+	<p>Notice that cities[0] returns the first element which is "Madrid".</p>
+
+	<script>
+		var cities = ["Madrid", "Berlin", "Tokyo"];
+		document.getElementById('demo').innerHTML = cities[1];
+	</script>
+
+</body>
+</html>

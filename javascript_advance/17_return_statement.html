@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Return Statement</title>
+
+	<style>
+		body {
+			background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+			height: 100vh;
+			color: #fdeff9;
+			font-family: sans-serif;
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Return Statement</h1>
+
+	<p>The return statement is used in a function to stop its execution and to return a value to the function caller.</p>
+
+	<p>For example, the addNumbers() function, below returns the sum of its arguments to the function caller.</p>
+
+	<p>Then the function caller prints the returnd value to an element.</p>
+
+	<p id="event"></p>
+	<script>
+		function addNumbers(num1, num2) {
+			var sum = num1 + num2;
+			return sum;
+		}
+		// THE FUNCTION CALLER
+		document.getElementById('event').innerHTML = addNumbers(5, 4);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Use Of Function</title>
+
+	<style>
+		body {
+			background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+			height: 100vh;
+			color: #fdeff9;
+			font-family: sans-serif;
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Use Of Function</h1>
+
+	<h3>Why Use Functions?</h3>
+
+	<p>Functions in JavaScript are just like tools in real life.</p>
+
+	<p>They make coding easier.</p>
+
+	<p>Instead of writing a block of codes over and over again, we can just reuse the same code many times.</p>
+
+	<p>The function below converts <b>Kilometer to Miles</b></p>
+
+	<p id="demo"></p>
+
+	<script>
+		function toMiles(kilometer) {
+			var miles = kilometer * 0.62137;
+			return kilometer + " kilometer/s " + " equals " + miles + " miles.";
+		}
+
+		// WE CAN USE THE FUNCTION AS MANY TIMES AS WE WANT
+		alert(toMiles(3));
+		document.getElementById('demo').innerHTML = toMiles(10);
+	</script>
+
+</body>
+</html>

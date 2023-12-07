@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Introduction</title>
+
+	<style>
+		body {
+			font-family: sans-serif;
+			background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+			color: #fdeff9;
+			height: 100vh;
+			padding: 20px;
+		}
+
+		button {
+			background-color: #7303c0;
+			color: #fdeff9;
+			padding: 5px 10px;
+			border: 2px solid #fdeff9;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>What is JavaScript?</h1>
+
+	<p>JavaScript is a programming or a scripting language that allows the implementation of features on web pages.</p>
+
+	<p>We know that Hypertext Markup Language HTML elements are the building blocks of web pages.</p>
+
+	<p>And, Cascading Style Sheet CSS is used for designing HTML elements.</p>
+
+	<p>JavaScript on the other hand, is what implements the features of web pages.</p>
+
+	<p>in this example, HTML is used to create the button.</p>
+
+	<p>Then, CSS is used to design it.</p>
+
+	<p>Finally, JavaScript is used to add a simple function that showes a dialog box, when the button clicked.</p>
+
+	<button type="button" id="btn">Show Dialog Box</button>
+
+	<script>
+		document.getElementById('btn').onclick = function() {
+			alert('I Am A Dialog Box!');
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Global Variable</title>
+
+	<style>
+		body {
+			background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+			height: 100vh;
+			color: #fdeff9;
+			font-family: sans-serif;
+			margin: 20px;
+		}
+
+		button {
+			background-color: #7303c0;
+			color: #fdeff9;
+			padding: 5px 10px;
+			border: 2px solid #fdeff9;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Global Variable</h1>
+
+	<p>Global Variable can be used by any function.</p>
+
+	<p>Global Variables are variables declared outside a function.</p>
+
+	<p>For example, the <b>fruit</b> variable below is declared outside a function.</p>
+
+	<p>Therefore, it can be used by any function.</p>
+
+	<p id="event"></p>
+
+	<button onclick="myFun()">Call Function</button>
+
+	<script>
+		var fruit = "Mango";
+
+		function myFun() {
+			document.getElementById('event').innerHTML = "My Favourite Fruit is " + fruit;
+		}
+	</script>
+
+</body>
+</html>

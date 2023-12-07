@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Functions</title>
+
+	<style>
+		body {
+			background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+			height: 100vh;
+			color: #fdeff9;
+			font-family: sans-serif;
+			margin-left: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Functions</h1>
+
+	<p>Function are one of the fundamental building blocks of JavaScript</p>
+
+	<p>A function is a JavaScript Method.</p>
+
+	<p>It is a set of statements that performs a task or produces a value.</p>
+
+	<p>It is executed when it is invoked (called) by something.</p>
+
+	<h3>Function Definition</h3>
+
+	<p>A JavaScript function is defined or declared using the function keyword, followed by</p>
+
+	<ul>
+		<li>The name of the function</li>
+
+		<li>A list of parameters (optionals) enclosed in perentheses (). Multiple parameters are seperated by commas (,)</li>
+
+		<li>Parameter acts as placeholder variable inside the function.</li>
+
+		<li>The block of codes or the statements enclosed in curly braces {}</li>
+	</ul>
+
+	<p id="fun"></p>
+
+	<script>
+		/* SYNTAX
+		function functionName(parameters1, parameters1) {
+			CODES OR STATEMENTS TO BE EXECUTED
+		} */
+
+		// DEFINING FUNCTION
+		function writeText(str) {
+			document.getElementById('fun').innerHTML = str;
+		}
+
+		// CALLING THE FUNCTION
+		writeText("Hello World!")
+	</script>
+
+</body>
+</html>

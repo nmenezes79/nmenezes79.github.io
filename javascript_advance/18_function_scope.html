@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Function Scope</title>
+
+	<style>
+		body {
+			background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+			height: 100vh;
+			color: #fdeff9;
+			font-family: sans-serif;
+			padding: 20px;
+		}
+
+		button {
+			background-color: #7303c0;
+			color: #fdeff9;
+			padding: 5px 10px;
+			border: 2px solid #fdeff9;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Function Scope</h1>
+
+	<p>Varaibles declared inside a function are called local variable.</p>
+
+	<p>Local variables can only be used inside the function where it was declared.</p>
+
+	<p>If a local variable is used outside, the value's data type is undefined.</p>
+
+	<p>Notice that nothing will be printed on the paragraph elements with the event id,</p>
+
+	<p>becaues the name variable cannot be used outside the function.</p>
+
+	<p id="event">I am the paragraph whth the "<b>event</b>" id.</p>
+
+	<p id="event1">I am the paragraph with the "<b>event1</b>" id. My value is not changed because the <b>fullName</b> variable is <b>undefined</b> when used outside the functional scope</p>
+
+	<button onclick="getAge(19)">Call Function</button>
+
+	<script>
+		function getAge(age) {
+			var fullName = "John Smith";
+			// THE FULL NAME VARIABLE CANN BE USED HERE
+			document.getElementById('event').innerHTML = fullName + " is " + age + " years old."
+		}
+
+		//THE FULLNAME VARIABLE CANNOT BE USED HERE
+		document.getElementById('event1').innerHTML = fullName;
+	</script>
+
+</body>
+</html>

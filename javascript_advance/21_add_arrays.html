@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Add Array</title>
+
+	<style>
+		body {
+			background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+			height: 100vh;
+			color: #fdeff9;
+			font-family: sans-serif;
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Add Array</h1>
+
+	<p>The push() method adds one or more elements (items) to the end of an array.</p>
+
+	<P>The unshift() method adds one or more elements (items) to the front of an array.</P>
+
+	<p id="demo"></p>
+
+	<script>
+		// PUSH() METHOD
+		var cities = ["Madrid", "Berlin", "Tokyo"];
+		cities.push("Rio");
+		// document.getElementById('demo').innerHTML = cities;
+		console.log(cities);
+
+		cities.push("Moscow");
+		console.log(cities);
+
+		// UNSHIFT() METHOD
+		cities.unshift("Denver");
+		console.log(cities);
+	</script>
+
+</body>
+</html>

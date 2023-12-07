@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Loop Over Array</title>
+
+	<style>
+		body {
+			background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+			height: 100vh;
+			color: #fdeff9;
+			font-family: sans-serif;
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Loop Over Array</h1>
+
+	<p>Looping over an array means accessing its data individually</p>
+
+	<p>We can use the for loop to loop over an array</p>
+
+	<p>Notice: That we used the addition assignment (+=) operator with the innerHTML property.</p>
+
+	<p>This makes sure that the printed elemenents do not get overwritten</p>
+
+	<p id="demo"></p>
+
+	<script>
+		// LOOP OVER ARRAY
+		var cities = ["Denver", "Madrid", "Berlin", "Tokyo", "Rio"];
+
+		for(var i = 0; i < cities.length; i++) {
+			document.getElementById('demo').innerHTML += cities[i] + " <br> ";
+		}
+	</script>
+
+</body>
+</html>

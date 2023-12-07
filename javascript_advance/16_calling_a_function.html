@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calling A Functions</title>
+
+	<style>
+		body {
+			background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+			height: 100vh;
+			color: #fdeff9;
+			font-family: sans-serif;
+			padding: 20px;
+		}
+
+		button {
+			background-color: #7303c0;
+			color: #fdeff9;
+			padding: 5px 10px;
+			border: 2px solid #fdeff9;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Calling A Functions</h1>
+
+	<p>Functions will only be executed when they are called or invoked.</p>
+
+	<p>A function can be called inside a JavaScript program, just like what we did in the previous example.</p>
+
+	<p>A function can be called when an event happens, most commonly when a button is clicked.</p>
+
+	<p id="fun">Sum Will Be Printed Here.</p>
+
+	<button onclick="addNumbers(5, 10)">Add</button>
+
+	<script>
+		function addNumbers(num1, num2) {
+			var sum = num1 + num2;
+			document.getElementById('fun').innerHTML = sum;
+		}
+	</script>
+
+</body>
+</html>
