@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Young Serif', serif;
+	background-color: #ffeaa7;
+	width: 50%;
+	margin: 200px auto;
+	text-align: center;
+	line-height: 2rem;
+}
+
+h1 {
+	color: #d63031;
+}
+
+.form input[type=text] {
+	width: 40px;
+	padding: 5px 10px;
+	margin: 10px;
+}
+
+.form input[type=submit] {
+	padding: 5px 10px;
+	margin: 10px;
+	color: #ecf0f1;
+	background-color: #34495e;
+	border: 1px solid #ecf0f1;
+}
