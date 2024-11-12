@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>31_callback_function</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>31_callback_function</h1>
+
+	<p>In JavaScript, a callback function is a function that is passed as an argument to another function and is executed after some operation has been completed, or in response to an event.</p>
+
+	<p>Callback functions are commonly used in asynchronous programming, where functions don't necessarily execute in the order they appear in the code.</p>
+
+	<script>
+		// Function that takes a callback
+		function doSomethingAsync(callback) {
+			// Simulating an asynchronous operation (e.g., fetching data from a server)
+			setTimeout(function () {
+				// After 3 second, invoke the callback
+				callback("Data processed successfully");
+			}, 3000);
+		}
+
+		// Callback function
+		function handleCompletion(message) {
+			console.log(message);
+		}
+
+		// Calling the function with the callback
+		doSomethingAsync(handleCompletion);
+
+	</script>
+
+</body>
+
+</html>

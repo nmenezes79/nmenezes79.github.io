@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>12_object_literal</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>12_object_literal</h1>
+
+
+	<script>
+		// Define an Object
+		let person = {
+			firtName: "Sayali",
+			lastName: "Sinha",
+
+			// Method
+			getFunction: function () {
+				return (`The name of the person is ${person.firtName} ${person.lastName}`)
+			},
+
+			// Object within object
+			phoneNumber: {
+				mobile: 9548695432,
+				landline: 245190
+			}
+		}
+
+		console.log(person.getFunction())
+		console.log(person.phoneNumber.landline);
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>27_js_date_methods</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>27_js_date_methods</h1>
+
+	<script>
+		// new Date(): Creates a new Date object representing the current date and time.
+
+		var currentDate = new Date();
+		console.log(currentDate); // Output: current date and time
+
+		// Date.now(): Returns the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC.
+
+		var millisecondsSinceEpoch = Date.now();
+		console.log(millisecondsSinceEpoch); // Output: current number of milliseconds since epoch
+
+		// getDate(): Returns the day of the month (1-31) for the specified date.
+
+		var currentDate = new Date();
+		var dayOfMonth = currentDate.getDate();
+		console.log(dayOfMonth); // Output: current day of the month
+
+		// getMonth(): Returns the month (0-11) for the specified date. Note: January is 0, February is 1, and so on.
+
+		var currentDate = new Date();
+		var month = currentDate.getMonth();
+		console.log(month); // Output: current month (0-11)
+
+		// getFullYear(): Returns the year (four digits for dates between 1000 and 9999) of the specified date.
+
+		var currentDate = new Date();
+		var year = currentDate.getFullYear();
+		console.log(year); // Output: current year
+
+		// getDay(): Returns the day of the week (0-6) for the specified date. Note: Sunday is 0, Monday is 1, and so on.
+
+		var currentDate = new Date();
+		var dayOfWeek = currentDate.getDay();
+		console.log(dayOfWeek); // Output: current day of the week (0-6)
+
+		// getHours(), getMinutes(), getSeconds(), getMilliseconds(): Return the hours, minutes, seconds, and milliseconds of the specified date, respectively.
+
+		var currentDate = new Date();
+		var hours = currentDate.getHours();
+		var minutes = currentDate.getMinutes();
+		var seconds = currentDate.getSeconds();
+		var milliseconds = currentDate.getMilliseconds();
+
+		console.log(hours, minutes, seconds, milliseconds); // Output: current time components
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>11_arrays</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>11_arrays</h1>
+
+	<p>Javascript arrays are list like objects</p>
+
+	<p>A single array can store multiple data.</p>
+
+	<script>
+		// Initialize New Array
+		var names = ['John', 'Mark', 'Jane'];
+		var years = new Array(1990, 1969, 1948);
+
+		console.log(names); // 'John', 'Mark', 'Jane'
+		console.log(names[2]); // Jane
+		console.log(names.length); // 3
+
+		// Mutate Array Data
+		names[1] = 'Ben'; // Changes the 1st Array 'Mark' to 'Ben'
+		console.log(names);
+
+		names[4] = 'Mike'; // Add 4th Array
+		console.log(names);
+
+		names[names.length] = 'Mary'; // Add Last Array
+		console.log(names);
+
+		// Different Data Types
+		var john = ['John', 1990, 'Designer', false];
+		console.log(john);
+
+		// Add Last Array
+		john.push('Blue');
+		console.log(john);
+
+		// Add First Array
+		john.unshift('Mr.');
+		console.log(john);
+
+		// Remove Last Array
+		john.pop();
+		console.log(john);
+
+		john.pop();
+		console.log(john);
+
+		// Remove First Array
+		john.shift();
+		console.log(john);
+
+		// IndexOf
+		console.log(john.indexOf(1990)); // Position of 1990 Array
+		console.log(john.indexOf(23)); // It will give -1 as 23 is not present in the Array
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>09_switch_statement</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>09_switch_statement</h1>
+
+	<p>Instead of writing multiple if statements, we can shorten the code with the switch statement.</p>
+
+	<script>
+		// If Statement
+		var fruit = "Mango";
+
+		if(fruit == "Apple") {
+			document.write("The Color is Red.");
+		}
+
+		if(fruit == "Strawberry") {
+			document.write("The Color is Pink.");
+		}
+
+		if(fruit == "Mango") {
+			document.write("The Color is Yellow.");
+		}
+
+		// Switch Statement
+		var fruit = "Apple";
+
+		switch(fruit) {
+			case "Apple":
+				document.write("The Color is Red.");
+				break;
+			case "Strawberry":
+				document.write("The Color is Pink.");
+				break;
+			case "Mango":
+				document.write("The Color is Yellow.");
+				break;
+			default:
+				document.write("There is No Fruit by this Name");
+		}
+	</script>
+
+</body>
+
+</html>

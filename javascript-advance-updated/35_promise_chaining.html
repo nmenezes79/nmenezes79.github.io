@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>35_promise_chaining</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>35_promise_chaining</h1>
+
+	<p>In this example, asyncFunction is a function that returns a promise which resolves after 1 second with the value multiplied by 2.</p>
+
+	<p>We chain multiple calls to asyncFunction, each time passing the result of the previous call to the next one.</p>
+
+	<p>Finally, we handle any errors that might occur during the execution of the promises using the catch method.</p>
+
+	<p>When you run this code, you'll see each result printed in sequence after each promise resolves.</p>
+
+	<script>
+		// Asynchronous Function that Returns a Promise
+		function asyncFunction(value) {
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+					resolve(value * 2);
+				}, 1000);
+			});
+		}
+
+		// Promise Chaining
+		asyncFunction(5)
+			.then(result => {
+				console.log("First result:", result);
+				return asyncFunction(result);
+			})
+			.then(result => {
+				console.log("Second result:", result);
+				return asyncFunction(result);
+			})
+			.then(result => {
+				console.log("Third result:", result);
+			})
+			.catch(error => {
+				console.error("Error:", error);
+			});
+
+	</script>
+
+</body>
+
+</html>

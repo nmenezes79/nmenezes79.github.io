@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>15_class_expression</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>15_class_expression</h1>
+
+
+	<script>
+		// Class expression
+		const Rectangle = class {
+			constructor(width, height) {
+				this.width = width;
+				this.height = height;
+			}
+
+			// Method to calculate area
+			calculateArea() {
+				return this.width * this.height;
+			}
+
+			// Method to calculate perimeter
+			calculatePerimeter() {
+				return 2 * (this.width + this.height);
+			}
+		};
+
+		// Creating an instance of the Rectangle class
+		const myRectangle = new Rectangle(5, 8);
+
+		// Using class methods
+		console.log("Area:", myRectangle.calculateArea()); // Output: Area: 40
+		console.log("Perimeter:", myRectangle.calculatePerimeter()); // Output: Perimeter: 26
+
+	</script>
+
+</body>
+
+</html>

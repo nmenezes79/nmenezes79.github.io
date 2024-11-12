@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>13_object_constructor</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>13_object_constructor</h1>
+
+	<script>
+		// Define a constructor function for creating Person objects
+		function Person(name, age) {
+			// Properties
+			this.name = name;
+			this.age = age;
+
+			// Method
+			this.sayHello = function () {
+				console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+			};
+		}
+
+		// Create instances of Person using the constructor
+		var person1 = new Person("Alice", 30);
+		var person2 = new Person("Bob", 25);
+
+		// Accessing properties and calling methods
+		console.log(person1.name); // Output: Alice
+		console.log(person2.age); // Output: 25
+		person1.sayHello(); // Output: Hello, my name is Alice and I am 30 years old.
+		person2.sayHello(); // Output: Hello, my name is Bob and I am 25 years old.
+	</script>
+
+</body>
+
+</html>

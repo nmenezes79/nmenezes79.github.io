@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>37_await</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>37_await</h1>
+
+	<p>fetchData() is a function that returns a promise. It simulates fetching data asynchronously, resolving after 2 seconds.</p>
+
+	<p>fetchAndProcessData() is an async function. Inside, we await the result of fetchData(), waiting for the promise to resolve before continuing execution.</p>
+
+	<p>After receiving the data, we simulate processing it by waiting for another 2 seconds.</p>
+
+	<p>We handle any errors that might occur during fetching or processing data using a try...catch block.</p>
+
+	<p>Finally, we call fetchAndProcessData() to initiate the process.</p>
+
+	<script>
+		// Asynchronous function that returns a promise
+		function fetchData() {
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+					resolve("Data Fetched Successfully!");
+				}, 2000); // Simulating an asynchronous operation that takes 2 seconds
+			});
+		}
+
+		// Asynchronous function using async/await
+		async function fetchAndProcessData() {
+			console.log("Fetching Data...");
+			try {
+				// Using await to wait for the fetchData() promise to resolve
+				const data = await fetchData();
+				console.log("Data Received:", data);
+				console.log("Processing Data...");
+				// Simulating further processing
+				await new Promise(resolve => setTimeout(resolve, 2000)); // Simulating another 2 seconds of processing
+				console.log("Data Processed Successfully!");
+			} catch (error) {
+				console.error("Error:", error);
+			}
+		}
+
+		// Calling the asynchronous function
+		fetchAndProcessData();
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>08_else_if_statement</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>08_else_if_statement</h1>
+
+	<p id="output"></p>
+
+	<script>
+		// Syntax
+		// if(condition1) {
+			// The block of code to be executed if the condition1 is true.
+		// } else if(condition2) {
+			// The block of code to be executed if the condition1 is false and condition2 is true.
+		// } else {
+			// The block of code to be executed if the condition1 and condition2 are false.
+		// }
+
+		// Else If Statement
+		function greetUser() {
+			var time = new Date().getHours();
+			if(time < 11) {
+				return "Good Morning!"
+			} else if(time < 18) {
+				return "Good Day!"
+			} else {
+				return "Good Evening!"
+			}
+		}
+
+		document.getElementById("output").innerHTML = greetUser();
+	</script>
+
+</body>
+
+</html>

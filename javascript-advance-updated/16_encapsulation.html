@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>16_encapsulation</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>16_encapsulation</h1>
+
+
+	<script>
+		class Student {
+			constructor() {
+				var name;
+				var marks;
+			}
+			getName() {
+				return this.name;
+			}
+
+			setName(name) {
+				this.name = name;
+			}
+
+			getMarks() {
+				return this.marks;
+			}
+
+			setMarks(marks) {
+				this.marks = marks;
+			}
+		}
+
+		var stud = new Student();
+		stud.setName("Sayali");
+		stud.setMarks(94);
+		document.write(stud.getName() + " " + stud.getMarks());
+		console.log(stud.getName() + " " + stud.getMarks());
+	</script>
+
+</body>
+
+</html>

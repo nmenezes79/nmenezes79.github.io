@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>26_js_string_methods</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>26_js_string_methods</h1>
+
+	<script>
+		// charAt(index): Returns the character at the specified index in a string.
+
+		var str = "Hello";
+		console.log(str.charAt(4)); // Output: "H"
+
+		// charCodeAt(index): Returns the Unicode value of the character at the specified index.
+
+		var str = "Hello";
+		console.log(str.charCodeAt(0)); // Output: 72
+
+		// concat(string2, string3, ...): Concatenates one or more strings to the original string.
+
+		var str1 = "Hello";
+		var str2 = " World";
+		console.log(str1.concat(str2)); // Output: "Hello World"
+
+		// indexOf(searchValue, startIndex): Returns the index within the calling string of the first occurrence of the specified value, starting the search at the given index.
+
+		var str = "Hello World";
+		console.log(str.indexOf("o")); // Output: 4
+
+		// lastIndexOf(searchValue, startIndex): Returns the index within the calling string of the last occurrence of the specified value, optionally starting the search at the given index.
+
+		var str = "Hello World";
+		console.log(str.lastIndexOf("o")); // Output: 7
+
+		// slice(startIndex, endIndex): Extracts a section of a string and returns it as a new string.
+
+		var str = "Hello World";
+		console.log(str.slice(0, 5)); // Output: "Hello"
+
+		// substring(startIndex, endIndex): Returns the part of the string between the start and end indexes, or to the end of the string.
+
+		var str = "Hello World";
+		console.log(str.substring(6, 11)); // Output: "World"
+
+		// toUpperCase(): Returns the calling string value converted to uppercase.
+
+		var str = "hello";
+		console.log(str.toUpperCase()); // Output: "HELLO"
+
+		// toLowerCase(): Returns the calling string value converted to lowercase.
+
+		var str = "HELLO";
+		console.log(str.toLowerCase()); // Output: "hello"
+
+		// trim(): Removes whitespace from both ends of a string.
+
+		var str = "   Hello World   ";
+		console.log(str.trim()); // Output: "Hello World"
+
+</script>
+
+</body>
+
+</html>

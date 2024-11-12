@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>04_constructor</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>04_constructor</h1>
+
+	<p id="output"></p>
+
+	<script>
+		// Constructor Method
+		class Person {
+			constructor() {
+				this.name = 'Neil Menezes';
+				this.age = 47;
+			}
+		}
+
+		const myName = new Person()
+		const myAge = new Person()
+
+		document.getElementById("output").innerHTML = ' My Name is ' + myName.name + ' I am ' + myAge.age + ' Years Old.';
+	</script>
+
+</body>
+
+</html>

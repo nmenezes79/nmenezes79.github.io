@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>33_then_method</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>33_then_method</h1>
+
+	<p>The .then() method is used in JavaScript with promises to handle asynchronous operations. Promises represent a value which may be available now, or in the future, or never.</p>
+
+	<p>.then() is used to specify what should happen when a promise is fulfilled (successfully resolved) or rejected (encounters an error).</p>
+
+	<script>
+		// Creating a promise
+		const myPromise = new Promise((resolve, reject) => {
+			// Simulating an asynchronous operation
+			setTimeout(() => {
+				const success = true;
+				if (success) {
+					resolve("Operation Completed Successfully!"); // Resolve the promise
+				} else {
+					reject("Error: Operation Failed!"); // Reject the promise
+				}
+			}, 2000); // Resolving after 2 seconds
+		});
+
+		// Using the .then() method to handle the promise
+		myPromise.then(
+			// The first function in .then() is for handling the successful resolution
+			(successMessage) => {
+				console.log("Success : " + successMessage);
+			},
+			// The second function in .then() is for handling the rejection
+			(errorMessage) => {
+				console.log("Error : " + errorMessage);
+			}
+		);
+
+	</script>
+
+</body>
+
+</html>
