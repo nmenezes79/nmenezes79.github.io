@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 1</title>
+    <style>
+        body {
+            background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+            color: #fdeff9;
+            height: 100vh;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #7303c0;
+            border: 2px solid #fff;
+            color: #fdeff9;
+        }
+
+        #container {
+            width: 425px;
+            height: 425px;
+            position: relative;
+            background: #03001e;
+            }
+            
+        #animate {
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            background: #ec38bc;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>How to Create HTML Animations with JavaScript</h2>
+
+    <p><button onclick="myMove()">Click Me</button></p> 
+
+    <div id ="container">
+        <div id ="animate"></div>
+    </div>
+
+    <script>
+        function myMove() {
+            let id = null;
+            const elem = document.getElementById("animate");   
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 6);
+            
+            function frame() {
+                if (pos == 350) {
+                clearInterval(id);
+                } else {
+                pos++; 
+                elem.style.top = pos + "px"; 
+                elem.style.left = pos + "px"; 
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

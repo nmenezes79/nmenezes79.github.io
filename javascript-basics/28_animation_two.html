@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 2</title>
+    <style>
+        body {
+            background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+            color: #fdeff9;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            position: relative;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: 3;
+        }
+
+        @keyframes example {
+            0%   {background-color: #c0392b;   left: 0px;   top: 0px;}
+            25%  {background-color: #f1c40f;   left: 200px; top: 0px;}
+            50%  {background-color: #2980b9;   left: 200px; top: 200px;}
+            75%  {background-color: #16a985;   left: 0px;   top: 200px;}
+            100% {background-color: #c0392b;   left: 0px;   top: 0px;}
+        }
+    </style>
+</head>
+
+<body>
+    <h2>The Following Example will run Animation 3 Times before it stops</h2>
+
+    <div></div>
+</body>
+</html>

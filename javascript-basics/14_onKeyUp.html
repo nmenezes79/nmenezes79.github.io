@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onKeyUp Event</title>
+    <style>
+        body {
+            background: linear-gradient(#f12711, #f5af19);
+            color: #fff;
+            height: 100vh;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #event {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>onKeyUp Event</h2>
+
+    <p>A function is triggered when the user releases a key in the input field. The function transforms the character to upper case.</p>
+
+    <p>Enter Your Name</p>
+    <input type="text" id="fname" onkeyup="myFunction()">
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+    }
+</script>
+
+</body>
+</html>

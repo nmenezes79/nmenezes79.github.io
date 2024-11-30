@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByClassName</title>
+    <style>
+        body {
+            background: linear-gradient(#f12711, #f5af19);
+            color: #fff;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+
+        div {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #f12711;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+    </style>    
+</head>
+
+<body>
+    <h1>getElementByClassName</h1>
+
+    <div class="example">
+        <p>This element in first div with class="example". Div's index is 0.</p>
+    </div>
+
+    <!-- Example Color 0 -->
+    <div class="example color">
+        <p>This element in first div with class="example color". Div's index is 0.</p>
+    </div>
+
+    <!-- Example Color 1 -->
+    <div class="example color">
+        <p>This element in second div with class="example color". Div's index is 1.</p>
+    </div>
+
+    <!-- Example Color 2 -->
+    <div class="example color">
+        <p>This element in second div with class="example color". Div's index is 2.</p>
+    </div>
+
+    <p>Click the button to change the background color of the first div element with the classes "example" and "color".</p>
+
+    <button onclick="myFunction()">Try It</button>
+
+<script>
+    function myFunction() {
+        var x = document.getElementsByClassName("example color");
+        x[2].style.backgroundColor = "red";
+    }
+</script>
+</body>
+
+</html>

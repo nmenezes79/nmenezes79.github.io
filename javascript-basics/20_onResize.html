@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onResize Event</title>
+    <style>
+        body {
+            background: linear-gradient(#f12711, #f5af19);
+            color: #fff;
+            height: 100vh;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body onresize = "fun()">
+    <h2>onResize Event</h2>
+
+    <p> This is an example of using onresize attribute.</p>
+
+    <p>Try to resize the browser's window to see the effect. </p>
+
+    <p id = "para"></p>
+    
+    <p> You have resized the window <span id = "s1"> 0 </span> times.</p>  
+
+    <script>
+        var i = 0;  
+
+        function fun() {  
+        var res = "Width = " + window.outerWidth + "<br>" + "Height = " + window.outerHeight;  
+        document.getElementById("para").innerHTML = res;  
+            
+        var res1 = i += 1;  
+        document.getElementById("s1").innerHTML = res1;  
+        }  
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByName</title>
+    <style>
+        body {
+            background: linear-gradient(#f12711, #f5af19);
+            color: #fff;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #f12711;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>getElementByName</h1>
+
+    Red    
+    <input name="color" type="checkbox" value="Red">
+
+    Blue
+    <input name="color" type="checkbox" value="Blue">
+
+    Yellow
+    <input name="color" type="checkbox" value="Yellow">
+
+    <p>Click the button to find out how many elements there are in the document that have a name attribute with the value "color".</p>
+
+    <button onclick="myFunction()">Try It</button>
+
+    <p id="fun"></p>
+
+<script>
+    function myFunction() {
+    var x = document.getElementsByName('color').length;
+    document.getElementById("fun").innerHTML = x;
+    }
+</script>
+</body>
+</html>

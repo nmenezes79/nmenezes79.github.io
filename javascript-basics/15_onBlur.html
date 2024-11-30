@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onBlur Event</title>
+    <style>
+        body {
+            background: linear-gradient(#f12711, #f5af19);
+            color: #fff;
+            height: 100vh;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        p {
+            text-align: center;
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>onBlur Event</h2>
+
+    <p>When you enter the input field, a function is triggered which sets the Background color to Yellow. When you leave the input field, a function is triggered which sets the Background color to Red.</p>
+
+    <p>Enter Your Name</p>
+    
+    <input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()">
+
+<script>
+    // FOCUS = CHANGES THE BACKGROUND COLOR OF INPUT TO YELLOW
+    function focusFunction() {
+        document.getElementById("myInput").style.background = "yellow";
+    }
+
+    // NO FOCUS = CHANGES THE BACKGROUND COLOR OF INPUT TO RED
+    function blurFunction() {
+        document.getElementById("myInput").style.background = "red";
+    }
+</script>
+
+</body>
+</html>

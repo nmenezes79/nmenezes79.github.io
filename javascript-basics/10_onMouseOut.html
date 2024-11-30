@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onMouseOut Event</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+            color: #fdeff9;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>onMouseOut Event</h1>
+
+    <p>This example demonstrates how to assign an 'onMouseOver' and 'onMouseOut' event to a H1 element</p>
+
+    <h2 id="event" onmouseover="mouseOver()" onmouseout="mouseOut()">Mouse Over Me</h2>
+
+    <script>
+        function mouseOver() {
+            document.getElementById('event').style.color = 'purple';
+        }
+
+        function mouseOut() {
+            document.getElementById('event').style.color = 'white';
+        }
+    </script>
+</body>
+</html>
