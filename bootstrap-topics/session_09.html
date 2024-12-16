@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap v4 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- Bootstrap v5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<title>session_09</title>
+</head>
+
+<body>
+	<h4 class="text-center display-4 my-4 text-primary">Forms and Buttons</h4>
+	<!-- Container -->
+	<div class="container">
+		<!-- Vertical Form -->
+		<h4 class="text-center my-4">Vertical Form</h4>
+		<div class="container p-3" style="background-color: #ecf0f1;">
+			<form action="#">
+				<!-- Email -->
+				<div class="form-group">
+					<label class="text-danger" for="email">Email Address</label>
+					<input type="email" class="form-control" id="email" aria-describedby="email"
+						placeholder="Enter Email Address">
+					<small class="form-text text-muted">We'll Never Share Your Email With Anyone Else</small>
+				</div>
+
+				<!-- Password -->
+				<div class="form-group">
+					<label class="text-primary" for="password">Password</label>
+					<input type="password" class="form-control" id="password" aria-describedby="password"
+						placeholder="Enter Password">
+				</div>
+
+				<!-- Check Box -->
+				<div class="form-group form-check">
+					<input type="checkbox" class="form-check-input" id="checkbox">
+					<label class="text-info form-check-label" for="checkbox">Check Me Out</label>
+				</div>
+
+				<!-- Button -->
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+
+		<!-- Horizontal Form -->
+		<h4 class="text-center my-4">Horizontal Form</h4>
+		<div class="container p-3 bg-light">
+			<form action="#">
+				<!-- Row 1 -->
+				<div class="row mb-3">
+					<label class="col-sm-1 col-form-label" for="email">Email</label>
+					<div class="col-sm-11">
+						<input type="email" class="form-control" id="email" placeholder="Enter Email Address">
+					</div>
+				</div>
+				<!-- Row 2 -->
+				<div class="row mb-3">
+					<label class="col-sm-1 col-form-label" for="password">Password</label>
+					<div class="col-sm-11">
+						<input type="password" class="form-control" id="password" placeholder="Enter Password">
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<!-- Inline Form -->
+		<h4 class="text-center my-4">Inline Form</h4>
+		<div class="container p-3">
+			<form action="#" class="row row-cols-lg-auto g-3 align-items-center">
+				<div class="col-12">
+					<label for="username" class="visually-hidden">User Name</label>
+					<div class="input-group">
+						<div class="input-group-text">@</div>
+						<input type="text" class="form-control" id="username" placeholder="User Name">
+					</div>
+				</div>
+
+				<div class="col-12">
+					<label for="preference" class="visually-hidden">Preference</label>
+					<select class="form-select" id="inlineFormSelectPref">
+						<option selected>Choose...</option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+					</select>
+				</div>
+
+				<div class="col-12">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="inlineFormCheck">
+						<label class="form-check-label" for="inlineFormCheck">Remember Me</label>
+					</div>
+				</div>
+
+				<div class="col-12">
+					<button type="submit" class="btn btn-secondary">Submit</button>
+				</div>
+			</form>
+		</div>
+
+		<!-- Color Picker -->
+		<h4 class="text-center my-4">Color Picker</h4>
+		<form action="#">
+			<div class="text-center">
+				<input type="color" class="form-control-color">
+			</div>
+		</form>
+
+		<!-- Bootstrap Buttons -->
+		<h4 class="text-center my-4">Bootstrap Buttons</h4>
+		<button class="btn btn-primary">Primary</button>
+		<button class="btn btn-secondary">Secondary</button>
+		<button class="btn btn-success">Success</button>
+		<button class="btn btn-info">Info</button>
+		<button class="btn btn-warning">Warning</button>
+		<button class="btn btn-danger">Danger</button>
+		<button class="btn btn-dark">Dark</button>
+		<button class="btn btn-light">Light</button>
+		<button class="btn btn-link">Link</button>
+		<button class="btn btn-white text-white" style="background-color: #8e44ad;">Button</button>
+
+		<!-- Button Tags -->
+		<h4 class="text-center my-4">Button Tags</h4>
+		<div class="container">
+			<a href="#" class="btn btn-primary" role="button" target="_blank">Link</a>
+			<button class="btn btn-secondary" type="submit">Submit</button>
+			<input type="button" value="Button" class="btn btn-success">
+			<input type="submit" value="Submit" class="btn btn-info">
+			<input type="reset" value="Reset" class="btn btn-warning">
+		</div>
+
+		<!-- Button Outline -->
+		<h4 class="text-center my-4">Button Outline</h4>
+		<div class="container">
+			<!-- button*8.btn.btn-outline-primary -->
+			<button class="btn btn-outline-primary">Primary</button>
+			<button class="btn btn-outline-secondary">Secondary</button>
+			<button class="btn btn-outline-success">Success</button>
+			<button class="btn btn-outline-info">Info</button>
+			<button class="btn btn-outline-warning">Warning</button>
+			<button class="btn btn-outline-danger">Danger</button>
+			<button class="btn btn-outline-light">Light</button>
+			<button class="btn btn-outline-dark">Dark</button>
+		</div>
+
+		<!-- Spinner Buttons -->
+		<h4 class="text-center my-4">Spinner Buttons</h4>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="spinner-border" role="status">
+						<span class="visually-hidden">Loading....</span>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="spinner-grow" role="status">
+						<span class="visually-hidden">Loading....</span>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="spinner-grow text-info" role="status">
+						<span class="visually-hidden">Loading....</span>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="spinner-border spinner-border-sm" role="status">
+						<span class="visually-hidden">Loading....</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Container Closing Div -->
+	</div>
+
+	<div style="margin-bottom: 200px;"></div>
+</body>
+
+</html>
