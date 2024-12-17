@@ -1,0 +1,14 @@
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2021/11/17/19/14/background-6804433_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: sans-serif;
+    text-align: center;
+	margin-top: 200px;
+}
+
+h1 {
+    text-transform: uppercase;
+}
