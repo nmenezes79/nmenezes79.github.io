@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <h2 class="text-center">Shape Calculator</h2>
+    <div class="mb-3">
+        <label for="shape" class="form-label">Select Shape:</label>
+        <select id="shape" class="form-select" onchange="showFields()">
+            <option value="circle">Circle</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="triangle">Triangle</option>
+        </select>
+    </div>
+    <div id="input-fields" class="mb-3"></div>
+    <button class="btn btn-primary" onclick="calculate()">Calculate</button>
+    <h4 class="mt-4" id="result"></h4>
+    
+    <script>
+        class Shape {
+            calculateArea() {}
+            calculatePerimeter() {}
+        }
+
+        class Circle extends Shape {
+            constructor(radius) {
+                super();
+                this.radius = radius;
+            }
+            calculateArea() {
+                return Math.PI * this.radius * this.radius;
+            }
+            calculatePerimeter() {
+                return 2 * Math.PI * this.radius;
+            }
+        }
+
+        class Rectangle extends Shape {
+            constructor(length, width) {
+                super();
+                this.length = length;
+                this.width = width;
+            }
+            calculateArea() {
+                return this.length * this.width;
+            }
+            calculatePerimeter() {
+                return 2 * (this.length + this.width);
+            }
+        }
+
+        class Triangle extends Shape {
+            constructor(a, b, c) {
+                super();
+                this.a = a;
+                this.b = b;
+                this.c = c;
+            }
+            calculateArea() {
+                let s = (this.a + this.b + this.c) / 2;
+                return Math.sqrt(s * (s - this.a) * (s - this.b) * (s - this.c));
+            }
+            calculatePerimeter() {
+                return this.a + this.b + this.c;
+            }
+        }
+
+        function showFields() {
+            let shape = document.getElementById("shape").value;
+            let inputFields = document.getElementById("input-fields");
+            let html = "";
+            
+            if (shape === "circle") {
+                html = '<label>Radius:</label> <input id="radius" type="number" class="form-control">';
+            } else if (shape === "rectangle") {
+                html = '<label>Length:</label> <input id="length" type="number" class="form-control">';
+                html += '<label>Width:</label> <input id="width" type="number" class="form-control">';
+            } else if (shape === "triangle") {
+                html = '<label>Side A:</label> <input id="a" type="number" class="form-control">';
+                html += '<label>Side B:</label> <input id="b" type="number" class="form-control">';
+                html += '<label>Side C:</label> <input id="c" type="number" class="form-control">';
+            }
+            
+            inputFields.innerHTML = html;
+        }
+
+        function calculate() {
+            let shape = document.getElementById("shape").value;
+            let result = document.getElementById("result");
+            let obj;
+
+            if (shape === "circle") {
+                let radius = parseFloat(document.getElementById("radius").value);
+                obj = new Circle(radius);
+            } else if (shape === "rectangle") {
+                let length = parseFloat(document.getElementById("length").value);
+                let width = parseFloat(document.getElementById("width").value);
+                obj = new Rectangle(length, width);
+            } else if (shape === "triangle") {
+                let a = parseFloat(document.getElementById("a").value);
+                let b = parseFloat(document.getElementById("b").value);
+                let c = parseFloat(document.getElementById("c").value);
+                obj = new Triangle(a, b, c);
+            }
+            
+            result.innerHTML = `Area: ${obj.calculateArea().toFixed(2)} <br> Perimeter: ${obj.calculatePerimeter().toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
