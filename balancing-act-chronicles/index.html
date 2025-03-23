@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task List</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		/* Inline CSS for background image */
+		.jumbotron {
+			background: url('https://via.placeholder.com/1500x500') no-repeat center center;
+			background-size: cover;
+			color: white;
+		}
+
+		#taskList {
+			margin-top: 30px;
+		}
+
+		.task-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #f8f9fa;
+			padding: 10px;
+			margin: 5px 0;
+			border-radius: 5px;
+		}
+
+		.task-item button {
+			background-color: red;
+			color: white;
+			border: none;
+			padding: 5px 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Jumbotron Section -->
+	<div class="jumbotron text-center">
+		<h1 class="display-4">Task Management</h1>
+		<p class="lead">Keep track of your tasks effortlessly!</p>
+	</div>
+
+	<!-- Task List Container -->
+	<div class="container" id="taskList">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-8">
+				<div class="input-group">
+					<input type="text" class="form-control" id="taskInput" placeholder="Add a new task">
+					<div class="input-group-append">
+						<button class="btn btn-primary" id="addTaskBtn">Add Task</button>
+					</div>
+				</div>
+				<ul id="taskListContainer" class="list-unstyled mt-3">
+					<!-- Task items will be added here dynamically -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap JS and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<script>
+		// Function to create a new task item
+		function createTaskItem(taskContent) {
+			const li = document.createElement('li');
+			li.classList.add('task-item');
+			li.innerHTML = `${taskContent} <button class="deleteBtn">Delete</button>`;
+			document.getElementById('taskListContainer').appendChild(li);
+			// Add event listener to the delete button
+			li.querySelector('.deleteBtn').addEventListener('click', deleteTask);
+		}
+		// Function to add a new task
+		function addTask() {
+			const taskInput = document.getElementById('taskInput');
+			const taskContent = taskInput.value.trim();
+			if (taskContent) {
+				createTaskItem(taskContent);
+				taskInput.value = ''; // Clear input field
+			}
+		}
+		// Function to delete a task
+		function deleteTask(event) {
+			const taskItem = event.target.parentElement;
+			taskItem.remove();
+		}
+		// Event listener for the "Add Task" button
+		document.getElementById('addTaskBtn').addEventListener('click', addTask);
+		// Event listener for pressing "Enter" to add a task
+		document.getElementById('taskInput').addEventListener('keypress', function (e) {
+			if (e.key === 'Enter') {
+				addTask();
+			}
+		});
+	</script>
+</body>
+
+</html>
