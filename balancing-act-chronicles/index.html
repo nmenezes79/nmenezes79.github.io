@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task List</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		/* Inline CSS for background image */
+		.jumbotron {
+			background: url('https://via.placeholder.com/1500x500') no-repeat center center;
+			background-size: cover;
+			color: white;
+		}
+
+		#taskList {
+			margin-top: 30px;
+		}
+
+		.task-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #f8f9fa;
+			padding: 10px;
+			margin: 5px 0;
+			border-radius: 5px;
+		}
+
+		.task-item button {
+			background-color: red;
+			color: white;
+			border: none;
+			padding: 5px 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Jumbotron Section -->
+	<div class="jumbotron text-center">
+		<h1 class="display-4">Task Management</h1>
+		<p class="lead">Keep track of your tasks effortlessly!</p>
+	</div>
+
+	<!-- Task List Container -->
+	<div class="container" id="taskList">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-8">
+				<div class="input-group">
+					<input type="text" class="form-control" id="taskInput" placeholder="Add a new task">
+					<div class="input-group-append">
+						<button class="btn btn-primary" id="addTaskBtn">Add Task</button>
+					</div>
+				</div>
+				<ul id="taskListContainer" class="list-unstyled mt-3">
+					<!-- Task items will be added here dynamically -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap JS and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<script>
+		// The function createTaskItem(taskContent) is responsible for creating a new task item in a to-do list.
+		function createTaskItem(taskContent) {
+			// This creates a new list item (<li>), which will represent a task in the to-do list.
+			const li = document.createElement('li');
+			// The newly created <li> is assigned a class name "task-item", which can be used for styling via CSS.
+			li.classList.add('task-item');
+			// The innerHTML property is used to insert:
+			// The taskContent, which is the text of the task.
+			// A Delete button (<button class="deleteBtn">Delete</button>) next to the task, allowing users to remove it.
+			li.innerHTML = `${taskContent} <button class="deleteBtn">Delete</button>`;
+			// The <li> is added to an existing HTML element with the ID taskListContainer, making it visible in the to-do list.
+			document.getElementById('taskListContainer').appendChild(li);
+			// Add event listener to the delete button
+			li.querySelector('.deleteBtn').addEventListener('click', deleteTask);
+		}
+
+		// The addTask() function is responsible for adding a new task to a to-do list.
+		function addTask() {
+			// It selects the HTML input element with the id of 'taskInput', which is where the user enters a task.
+			const taskInput = document.getElementById('taskInput');
+			// The .value property gets the text entered by the user.
+			// .trim() removes any leading or trailing spaces to prevent empty or whitespace-only tasks from being added.
+			const taskContent = taskInput.value.trim();
+			// This ensures that only non-empty tasks are added.
+			if (taskContent) {
+				// Calls a function createTaskItem(taskContent), which is assumed to create and add the task to the list.
+				createTaskItem(taskContent);
+				// Resets the input field to an empty string so the user can enter a new task.
+				taskInput.value = '';
+			}
+		}
+
+		// This function, deleteTask(event), is designed to remove a task item from the DOM when called.
+		function deleteTask(event) {
+			// event Parameter: This function expects an event object, which is automatically passed when the function is used as an event handler (e.g., when a delete button is clicked).
+			// event.target (The Clicked Element):
+			// event.target refers to the specific element that triggered the event.
+			// If this function is attached to a delete button inside a task item, event.target would be that delete button.
+			// parentElement retrieves the parent of the clicked delete button.
+			// Assuming the delete button is inside a <li> or a <div> that represents a task, this line identifies the task container.
+			const taskItem = event.target.parentElement;
+			// taskItem.remove(); removes the entire task from the DOM.
+			taskItem.remove();
+		}
+
+		// Event listener for the "Add Task" button. This adds an event listener to the selected element.
+		document.getElementById('addTaskBtn').addEventListener('click', addTask);
+		// Event listener for pressing "Enter" to add a task
+		document.getElementById('taskInput').addEventListener('keypress', function (e) {
+			// This selects the HTML element with the ID taskInput, which is most likely an <input> field where users can type a task.
+			// This selects the HTML element with the ID taskInput, which is most likely an <input> field where users can type a task.
+			if (e.key === 'Enter') {
+				// This checks if the key pressed is the "Enter" key.
+				// If the "Enter" key is pressed, the addTask() function is called.
+				// The function receives an event object (e) that contains details about the keypress.
+				addTask();
+				// The addTask() function is presumably a function that adds the task entered in the input field to a task list.
+			}
+		});
+	</script>
+</body>
+
+</html>
