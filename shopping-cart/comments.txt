@@ -1,0 +1,64 @@
+// Selects all elements with the class add-cart, assumed to be buttons.
+
+// An array of shirt objects.
+// Each shirt has a name, tag (used as an ID), price, and inCart (used to track how many are added).
+
+// Add Event Listener to "Add to Cart" Buttons
+// Adds the product to the cart using cartNumbers().
+// Updates the total cost using totalCost().
+
+// Display Cart Count on Page Load
+// Retrieves the number of items in cart from localStorage and updates the UI (.cart span).
+
+// Manage Cart Numbers
+// Updates the cart count (add/remove).
+// Calls setItems(product) to update cart items in storage.
+
+// Store Cart Items in localStorage
+// Adds product to the cart in localStorage.
+// If the product is already there, it increases its inCart value.
+// Uses the tag property as a unique key.
+
+// let productNumbers = localStorage.getItem('cartNumbers');
+// productNumbers = parseInt(productNumbers);
+
+// Calculate Total Cost
+// Maintains and updates the total cart value in localStorage.
+
+// Render Cart Page
+// Retrieves cart items and cost from localStorage.
+// Displays each item with:
+// Name, image, price, quantity controls, and item total.
+// Calls: deleteButtons() — to enable removing products.
+// Calls: manageQuantity() — to enable quantity increase/decrease.
+
+// Increase/Decrease Product Quantity
+// Listens for clicks on .increase and .decrease buttons.
+// Updates inCart quantity.
+// Updates cart count and total price accordingly.
+
+// Remove Items from Cart
+// Adds event listeners to delete icons.
+// On click: Removes product from localStorage.
+// On click: Updates total count and cost.
+// On click: Refreshes cart display.
+
+// Initialize Functions
+// Ensures the cart count and cart contents display correctly when the page loads.
+
+Shirt 1 : https://m.media-amazon.com/images/I/81cjQIgZ95L._AC_UY1000_.jpg
+Shirt 2 : https://m.media-amazon.com/images/I/41VIqIa33-L._SX466_.jpg
+Shirt 3 : https://m.media-amazon.com/images/I/6127i15C5hL.jpg
+Shirt 4 : https://m.media-amazon.com/images/I/71z73yJSw5L._AC_SX342_.jpg
+Shirt 5 : https://m.media-amazon.com/images/I/51-EY7OwYyL._SR240,220_.jpg
+Shirt 6 : https://m.media-amazon.com/images/I/71CaGpjjYvL._AC_UY1000_.jpg
+
+
+Summary
+This code lets users:
+01. Add items to a cart.
+02. View items in the cart with quantity.
+03. Increase/decrease quantity.
+04. Remove items.
+05. See updated total price.
+06. All using localStorage for persistence.
