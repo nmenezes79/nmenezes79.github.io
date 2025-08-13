@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM & DOM Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        .box {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 10px 0;
+            display: block;
+            /* block display value */
+        }
+
+        .hidden {
+            display: none;
+            /* hide element */
+        }
+
+        .inline-box {
+            display: inline;
+            /* inline display value */
+            background: yellow;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Browser & Document Object Model Example</h1>
+    <button onclick="showBOMInfo()">Show BOM Info</button>
+    <button onclick="addElement()">Add Element</button>
+    <button onclick="removeElement()">Remove Element</button>
+    <button onclick="toggleBox()">Toggle Box</button>
+
+    <div id="box" class="box">
+        This is a sample box.
+    </div>
+
+    <div id="container"></div>
+
+    <script>
+        // ===== Console Log Example =====
+        console.log("Page loaded successfully!");
+
+        // ===== Browser Object Model Example =====
+        function showBOMInfo() {
+            alert("Browser Info: " + navigator.userAgent);
+            console.log("Current URL: " + window.location.href);
+            console.log("Window inner size: " + window.innerWidth + "x" + window.innerHeight);
+        }
+
+        // ===== Finding HTML Elements =====
+        const box = document.getElementById("box"); // find by ID
+        const container = document.querySelector("#container"); // find with querySelector
+
+        // ===== Adding an Element =====
+        function addElement() {
+            let newPara = document.createElement("p");
+            newPara.textContent = "I am a new paragraph!";
+            newPara.classList.add("inline-box");
+            container.appendChild(newPara);
+            console.log("New element added.");
+        }
+
+        // ===== Deleting an Element =====
+        function removeElement() {
+            if (container.lastChild) {
+                container.removeChild(container.lastChild);
+                console.log("Last element removed.");
+            } else {
+                console.log("No elements to remove!");
+            }
+        }
+
+        // ===== CSS Display Values Example =====
+        function toggleBox() {
+            if (box.classList.contains("hidden")) {
+                box.classList.remove("hidden");
+                console.log("Box is now visible.");
+            } else {
+                box.classList.add("hidden");
+                console.log("Box is now hidden.");
+            }
+        }
+    </script>
+</body>
+
+</html>
