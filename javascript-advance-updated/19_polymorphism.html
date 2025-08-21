@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>19_polymorphism</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>19_polymorphism</h1>
+
+
+	<script>
+		class A {
+			display() {
+				document.writeln("As is Invoked")
+			}
+		}
+
+		class B extends A {
+		}
+
+		var b = new B();
+		b.display();
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Secure Online Banking</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f9;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 50px auto;
+			background: white;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		h1 {
+			color: #2c3e50;
+			text-align: center;
+		}
+
+		.form-group {
+			margin-bottom: 15px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+
+		input {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		button {
+			background-color: #3498db;
+			color: white;
+			border: none;
+			padding: 10px 15px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #2980b9;
+		}
+
+		.transactions {
+			margin-top: 20px;
+		}
+
+		.transaction {
+			padding: 10px;
+			background: #ecf0f1;
+			margin-bottom: 10px;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Secure Online Banking</h1>
+		<div class="form-group">
+			<label for="accountNumber">Account Number:</label>
+			<input type="text" id="accountNumber" placeholder="Enter Account Number">
+		</div>
+		<div class="form-group">
+			<label for="amount">Amount:</label>
+			<input type="number" id="amount" placeholder="Enter Amount">
+		</div>
+		<button onclick="deposit()">Deposit</button>
+		<button onclick="withdraw()">Withdraw</button>
+		<button onclick="checkBalance()">Check Balance</button>
+
+		<div class="transactions" id="transactions">
+			<h3>Transaction History</h3>
+		</div>
+	</div>
+
+	<script>
+		// OOP Concept: Uses classes (Account & Transaction) for structured data handling.
+		// The Account class represents a bank account with an account number, 
+		// balance, and a list of transactions.
+		// Takes an account number and an optional starting balance (default is 0).
+		class Account {
+			constructor(accountNumber, balance = 0) {
+				this.accountNumber = accountNumber; // Stores the account number.
+				this._balance = balance; // Holds the account balance (marked with an underscore _ to indicate it’s private).
+				this.transactions = []; // An array to keep track of deposit and withdrawal history.
+			}
+
+			// Validation: Prevents invalid deposits/withdrawals.
+			// Checks if the deposit amount is valid (greater than 0).
+			deposit(amount) {
+				if (amount <= 0) {
+					alert("Deposit amount must be greater than zero.");
+					return;
+				}
+				this._balance += amount; // Adds the deposit amount to _balance.
+				this.transactions.push(new Transaction("Deposit", amount)); // Creates a new Transaction object and adds it to transactions.
+				alert(`Deposited: $${amount}`); // Displays an alert confirming the deposit.
+			}
+
+			// Checks if the withdrawal amount is valid.
+			// Ensures there is enough balance before withdrawing.
+			withdraw(amount) {
+				if (amount <= 0) {
+					alert("Withdrawal amount must be greater than zero.");
+					return;
+				}
+				if (amount > this._balance) {
+					alert("Insufficient balance.");
+					return;
+				}
+				this._balance -= amount; // Deducts the amount from _balance.
+				this.transactions.push(new Transaction("Withdrawal", amount)); // Creates a Transaction object and adds it to transactions.
+				alert(`Withdrew: $${amount}`); // Displays an alert confirming the withdrawal.
+			}
+
+			// Returns the current account balance.
+			getBalance() {
+				// Encapsulation: Keeps _balance private and exposes methods to access it.
+				return this._balance;
+			}
+		}
+
+		// The Transaction class represents a single transaction.
+		class Transaction {
+			constructor(transactionType, amount) {
+				this.transactionType = transactionType; // transactionType → "Deposit" or "Withdrawal".
+				this.amount = amount; // amount → The transaction amount.
+				this.timestamp = new Date().toLocaleString(); // Stores the timestamp of the transaction.
+			}
+
+			// Returns a formatted string with the timestamp, transaction type, and amount.
+			getDetails() {
+				return `${this.timestamp} - ${this.transactionType}: $${this.amount}`;
+			}
+		}
+
+		// An Account object is created
+		// This initializes an account with number "123456789" and a balance of 0.
+		const account = new Account("123456789");
+
+		// Gets the amount entered in the HTML input field.
+		function deposit() {
+			const amount = parseFloat(document.getElementById("amount").value); // Calls the deposit() method.
+			account.deposit(amount);
+			updateTransactionHistory(); // Updates the transaction history.
+		}
+
+		// Gets the amount entered in the input field.
+		// Calls withdraw().
+		function withdraw() {
+			const amount = parseFloat(document.getElementById("amount").value);
+			account.withdraw(amount);
+			updateTransactionHistory(); // Updates the transaction history.
+		}
+
+		// User Interaction: Uses alerts for deposits, withdrawals, and balance checks.
+		// Displays an alert with the current account balance.
+		function checkBalance() {
+			alert(`Your current balance is: $${account.getBalance()}`);
+		}
+
+		// Retrieves the transactions array from the account object.
+		// Loops through transactions and displays each one in a <div> inside the #transactions container
+		function updateTransactionHistory() {
+			const transactionsDiv = document.getElementById("transactions");
+			transactionsDiv.innerHTML = "<h3>Transaction History</h3>";
+			account.transactions.forEach((transaction) => {
+				const div = document.createElement("div");
+				div.className = "transaction";
+				div.textContent = transaction.getDetails();
+				transactionsDiv.appendChild(div);
+			});
+		}
+	</script>
+</body>
+
+</html>

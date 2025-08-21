@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>05_class</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>05_class</h1>
+
+	<p>How to define and use a Class method.</p>
+
+	<p id="output"></p>
+
+	<script>
+		// Class Method
+		class Car {
+			constructor(name, year) {
+				this.name = name;
+				this.year = year;
+			}
+			age() {
+				const date = new Date();
+				return date.getFullYear() - this.year;
+			}
+		}
+
+		const myCar = new Car("Ford", 2014);
+		document.getElementById("output").innerHTML =
+			"My car is " + myCar.age() + " years old.";
+	</script>
+
+</body>
+
+</html>

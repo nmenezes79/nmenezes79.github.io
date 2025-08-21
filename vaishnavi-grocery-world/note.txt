@@ -1,0 +1,29 @@
+vaishnavi-grocery-world/
+npm init -y
+npm install express mysql
+├── public/
+│   └── style.css
+├── views/
+│   ├── index.html         <-- Landing Page
+│   └── home.html          <-- Home Page
+├── app.js                 <-- Express server
+└── db.js                  <-- MySQL Connection
+
+node app.js
+
+CREATE DATABASE grocery_store;
+
+USE grocery_store;
+
+CREATE TABLE products (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    P_Name VARCHAR(255),
+    Price DECIMAL(10,2),
+    Image_Url VARCHAR(255)
+);
+
+INSERT INTO products (P_Name, Price, Image_Url) VALUES
+('Basmati Rice', 55.00, 'https://via.placeholder.com/150'),
+('Olive Oil', 120.00, 'https://via.placeholder.com/150'),
+('Whole Wheat Bread', 40.00, 'https://via.placeholder.com/150');
+

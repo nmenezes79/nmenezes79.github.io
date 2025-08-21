@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>07_else_statement</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>07_else_statement</h1>
+
+	<form>
+		<label>How Old Are You?</label><br><br>
+		<input type="number" name="age" id="age"><br><br>
+		<button type="submit" id="submit">Submit</button>
+	</form>
+
+	<script>
+		// Syntax
+		// if(condition) {
+			// The block of code to be executed if the condition is true.
+		// } else {
+			// The block of code to be executed if the condition is false.
+		// }
+
+		// Else Statement
+		document.getElementById("submit").addEventListener("click", function() {
+			var age = document.getElementById("age").value;
+			if(age > 18) {
+				alert("User is Old Enough to Enter!")
+			} else {
+				alert("User is NOT Old Enough to Enter!")
+			}
+		})
+	</script>
+
+</body>
+
+</html>

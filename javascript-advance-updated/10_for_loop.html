@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>10_for_loop</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>10_for_loop</h1>
+
+	<p>InitialExpression - This initializes the loop counter.</p>
+
+	<p>Condition - If it is true, the loop statement execute, If false, the statement don't execute.</p>
+
+	<p>IncrementExpression - Increment the loop counter, runs everytime the statement are executed.</p>
+
+	<p>A for loop executes statements repeatedly as long as the specified condition is met.</p>
+
+	<p id="output"></p>
+
+	<script>
+		// For Loop
+		// Syntax
+		// for(initialExpression; condition; incrementExpression) {// Statement of code blocks}
+
+		var fruits = ["Apple", "Banana", "Mango", "Orange", "Strawberry"];
+		var html = "";
+
+		for(var i = 0; i < fruits.length; i++) {
+			html += "<p>" + fruits[i] + "</p>";
+		}
+
+		document.getElementById("output").innerHTML = html;
+	</script>
+
+</body>
+
+</html>

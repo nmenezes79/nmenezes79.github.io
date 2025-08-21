@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>20_this_keyword</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>20_this_keyword</h1>
+
+	<button onclick="myFunction()">Call myFunction</button>
+
+	<script>
+		var city = "New York";
+		function myFunction() {
+			var x = this;
+			x.alert("I want to go to " + x.city)
+		}
+	</script>
+
+</body>
+
+</html>

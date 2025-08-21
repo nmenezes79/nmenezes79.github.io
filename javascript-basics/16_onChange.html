@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onChange Event</title>
+    <style>
+        body {
+            background: linear-gradient(#f12711, #f5af19);
+            color: #fff;
+            height: 100vh;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #event {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>onChange Event</h2>
+
+    <p>Select an Airline from the List.</p>
+
+<select id="mySelect" onchange="myFunction()">
+    <option value="Qatar Airways">Qatar-Airways</option>
+    <option value="Singapore Airlines">Singapore-Airlines</option>
+    <option value="Emirates">Emirates</option>
+    <option value="Qantas">Qantas</option>
+</select>
+
+<p>When you select an Airline, a function is triggered which outputs the value of the selected Airline.</p>
+
+<p id="event"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    document.getElementById("event").innerHTML = "You Selected: " + x;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onKeyDown Event</title>
+    <style>
+        body {
+            background: linear-gradient(#f12711, #f5af19);
+            color: #fff;
+            height: 100vh;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #event {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>onKeyDown Event</h2>
+
+    <p>This example demonstrates how to assign an "onKeyDown" event to an input element.</p>
+
+    <p>Press a Key Inside the Text Field to Set a Yellow Background Color.</p>
+
+    <input type="text" id="demo" onkeydown="myFunction()">
+
+    <script>
+        function myFunction() {
+        document.getElementById("demo").style.backgroundColor = "yellow";
+        }
+    </script>
+</body>
+</html>

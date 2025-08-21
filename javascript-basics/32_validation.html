@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        body {
+            background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+            color: #fff;
+            height: 100vh;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #7303c0;
+            border: 2px solid #fdeff9;
+            color: #fdeff9;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>JavaScript Validation</h2>
+
+    <p>Please Input a Number Between 1 and 10:</p>
+    
+    <input id="numb">
+    
+    <button type="button" onclick="myFunction()">Submit</button>
+    
+    <p id="fun"></p>
+    
+    <script>
+    function myFunction() {
+        // GET THE VALUE OF THE INPUT FIELD WITH ID="NUMB"
+        let x = document.getElementById("numb").value;
+
+        // IF X IS NOT A NUMBER OR LESS THAN ONE OR GREATER THAN 10
+        let text;
+        if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input Not Valid";
+        } else {
+            text = "Input OK";
+        }
+        document.getElementById("fun").innerHTML = text;
+    }
+    </script>
+</body>
+</html>

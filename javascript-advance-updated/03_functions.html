@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>03_functions</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>03_functions</h1>
+
+	<p id="output">Sum of the function will be printed over here.</p>
+
+	<button onclick="addNumbers(2, 5)">Add</button>
+
+	<p>This is the button of an Arrow Function</p>
+
+	<button onclick="myFun(10, 14)">Click Me!</button>
+
+	<script>
+		// Basic Function
+		function addNumbers(num1, num2) {
+			var sum = num1 + num2;
+			document.getElementById("output").innerHTML = sum;
+		}
+
+		// Arrow Functions
+		myFun = (x, y) => alert(x + y);
+
+	</script>
+
+</body>
+
+</html>

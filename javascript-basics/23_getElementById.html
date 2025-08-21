@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+    <style>
+        body {
+            background: linear-gradient(#f12711, #f5af19);
+            color: #fff;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #f12711;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>getElementById</h1>
+
+    <p>JavaScript can change the content of an HTML element.</p>
+
+    <button type="button" onclick="myFunction()">Click Me!</button>
+
+    <p id="fun">Click the button to know.</p>
+
+<script>
+    function myFunction() { 
+    document.getElementById("fun").innerHTML = "Codeyoung";
+    }
+</script>
+</body>
+
+</html>

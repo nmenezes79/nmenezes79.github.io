@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onLoad Event</title>
+    <style>
+        body {
+            background: linear-gradient(#f12711, #f5af19);
+            color: #fff;
+            height: 100vh;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h2>onLoad Event</h2>
+
+    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" onload="loadImage()" width="400">
+
+    <script>
+        function loadImage() {
+            alert("Image is loaded");
+        }
+    </script>
+
+</body>
+</html>

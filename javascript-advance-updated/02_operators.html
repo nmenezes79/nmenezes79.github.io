@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>02_operators</title>
+</head>
+
+<body style="font-family: sans-serif;">
+	<h1>02_operators</h1>
+
+	<script>
+		// Arithmetic Operators
+		// Addition Operators
+		var num1 = 5;
+		var num2 = 10;
+		var sum = num1 + num2;
+		console.log(sum);
+
+		// Subtraction Operator
+		var num1 = 10;
+		var num2 = 5;
+		var difference = num1 - num2;
+		console.log(difference);
+
+		// Multiplication Operator
+		var num1 = 10;
+		var num2 = 5;
+		var product = num1 * num2;
+		console.log(product);
+
+		// Division Operator
+		var num1 = 10;
+		var num2 = 5;
+		var quotient = num1 / num2;
+		console.log(quotient);
+
+		// Assignment Operator
+		var x = 2;
+		var y = 3;
+		console.log((x = y + 1));
+		console.log((x = x * y));
+
+		// Addition Assignment Operator
+		var a = 2;
+		var b = 'hello';
+		console.log((a += 3));
+
+		// Subtraction Assignment Operator
+		var a = 2;
+		console.log((a -= 3));
+
+		// Remainder Assignment Operator
+		var a = 3;
+		console.log((a %= 2));
+
+		// Comprarison Operators
+		// Equality
+		console.log(1 == 1);
+		// Expected output: true
+
+		console.log('hello' == 'hello');
+		// Expected output: true
+
+		console.log('1' == 1);
+		// Expected output: true
+
+		console.log(0 == false);
+		// Expected output: true
+
+		// Strict Equality
+		console.log(1 === 1);
+		// Expected output: true
+
+		console.log('hello' === 'hello');
+		// Expected output: true
+
+		console.log('1' === 1);
+		// Expected output: false
+
+		console.log(0 === false);
+		// Expected output: false
+
+		// Logical Operators
+		// Logical AND Operator
+		var a = 3;
+		var b = -2;
+		console.log(a > 0 && b > 0);
+		// Expected output: false
+
+		// Logical OR Operator
+		var a = 3;
+		var b = -2;
+		console.log(a > 0 || b > 0);
+		// Expected output: true
+
+		// Logical NOT Operator
+		var a = 3;
+		var b = -2;
+		console.log(!(a > 0 || b > 0));
+		// Expected output: false
+
+		// Type Of
+		var name1 = "John Deo"; // String
+		console.log(typeof name1)
+		var num1 = 10; // Number
+		console.log(typeof num1);
+		var isCodingFun = true; // Boolean
+		console.log(typeof isCodingFun);
+		var title; // Undefined
+		console.log(typeof title);
+
+	</script>
+
+</body>
+
+</html>

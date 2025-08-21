@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onClick Event</title>
+    <style>
+        body {
+            background: linear-gradient(#03001e, #7303c0, #ec38bc, #fdeff9);
+            color: #fdeff9;
+            font-family: sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #7303c0;
+            border: 2px solid #fff;
+            color: #fff;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>onClick Event</h1>
+
+    <p>This example demonstrates how to assign an 'onClick' event to a Button.</p>
+
+    <button id="event" onclick="myFunction()">Click Me</button>
+
+    <script>
+        function myFunction() {
+            document.getElementById('event').innerHTML = 'YOU CLICKED ME!';
+        }
+    </script>
+</body>
+</html>

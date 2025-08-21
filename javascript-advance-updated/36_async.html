@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>36_async</title>
+</head>
+
+<body style="font-family: sans-serif; margin: 20px;">
+	<h1>36_async</h1>
+
+	<p>We define a function fetchData that returns a Promise. Inside the Promise constructor, we simulate an asynchronous operation with setTimeout, and once the operation is done, we resolve the Promise with some data.</p>
+
+	<p>We define an async function getData that uses the async keyword, allowing us to use await inside it. Inside this function, we call fetchData using await, which waits for the Promise returned by fetchData to resolve. Once resolved, we log the fetched data.</p>
+
+	<p>Finally, we call the getData function to initiate the fetching process.</p>
+
+	<script>
+		// Function that Returns a Promise
+		function fetchData() {
+			return new Promise((resolve, reject) => {
+				// Simulating asynchronous operation with setTimeout
+				setTimeout(() => {
+					const data = 'This is some Fetched Data';
+					// Resolve the Promise with the fetched data
+					resolve(data);
+				}, 2000); // Simulating a delay of 2 seconds
+			});
+		}
+
+		// Using the Async/Await syntax to consume the Promise
+		async function getData() {
+			try {
+				console.log('Fetching Data...');
+				// Wait for the fetchData Function to resolve its Promise
+				const data = await fetchData();
+				console.log('Data Fetched :', data);
+			} catch (error) {
+				console.error('Error Fetching Data :', error);
+			}
+		}
+
+		// Call the async function
+		getData();
+
+	</script>
+
+</body>
+
+</html>
