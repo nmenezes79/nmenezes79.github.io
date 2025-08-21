@@ -1,0 +1,6 @@
+# Create project folder
+mkdir jiya-web-adventure
+cd jiya-web-adventure
+
+# Create server file
+touch server.js
