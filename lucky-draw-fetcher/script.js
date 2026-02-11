@@ -6,7 +6,6 @@ document.getElementById("drawBtn").addEventListener("click", function () {
 			document.getElementById("winnerImg").src = user.picture.large;
 			document.getElementById("winnerName").textContent = `Name: ${user.name.first} ${user.name.last}`;
 			document.getElementById("winnerEmail").textContent = `Email: ${user.email}`;
-			document.querySelector(".winner-info").style.display = "block";
 		})
-		.catch(error => console.error("Error fetching data:", error));
+		.catch(error => console.error("Error Fetching Data:", error));
 });
