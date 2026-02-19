@@ -1,0 +1,75 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #fafafa;
+	color: #333;
+}
+
+nav {
+	background-color: #222;
+	padding: 15px;
+	text-align: center;
+}
+
+nav a {
+	color: white;
+	margin: 0 15px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+.hero {
+	text-align: center;
+	padding: 50px 20px;
+	background-color: #f0f0f0;
+}
+
+.products {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin: 20px;
+}
+
+.product {
+	text-align: center;
+	background: white;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+	max-width: 400px;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+	margin: 8px 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.contact-form button {
+	background-color: #333;
+	color: white;
+	cursor: pointer;
+}
+
+@media (max-width: 600px) {
+	.products {
+		flex-direction: column;
+		align-items: center;
+	}
+}

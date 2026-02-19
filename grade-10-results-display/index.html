@@ -5,123 +5,41 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap v4 -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<title>Grade 10 Results Display</title>
-
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #f0f4f7;
-			color: #333;
-		}
-
-		header {
-			background: linear-gradient(90deg, #007bff, #6610f2);
-			color: white;
-			padding: 20px;
-			text-align: center;
-			margin-bottom: 20px;
-		}
-
-		.input-section,
-		.results-section {
-			background: white;
-			padding: 20px;
-			border-radius: 8px;
-			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-			margin-bottom: 20px;
-		}
-
-		.result-item {
-			padding: 10px;
-			border-bottom: 1px solid #ddd;
-		}
-
-		.result-item:last-child {
-			border-bottom: none;
-		}
-	</style>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<title>🎉 Grade 10 Results Display</title>
 </head>
 
 <body>
-	<header>
-		<h1>Class X Results</h1>
-		<p>SNBP High School</p>
-	</header>
-
-	<div class="container">
-		<!-- Input Section -->
-		<div class="input-section">
-			<h4>Enter Student Result</h4>
-			<form id="resultForm">
-				<div class="form-group">
-					<label for="studentName">Student Name</label>
-					<input type="text" class="form-control" id="studentName" placeholder="Enter student name">
-				</div>
-				<div class="form-group">
-					<label for="studentMarks">Marks</label>
-					<input type="number" class="form-control" id="studentMarks" placeholder="Enter marks">
-				</div>
-				<button type="submit" class="btn btn-primary">Add Result</button>
-			</form>
-		</div>
-
-		<!-- Results Section -->
-		<div class="results-section">
-			<h4>Results</h4>
-			<div id="resultsContainer"></div>
-		</div>
+	<div class="container-fluid text-center bg-warning text-dark p-2 shodow lg">
+		<h1>🚀 Class X Results 🚀</h1>
+		<p class="text-white">SNGP High School</p>
 	</div>
 
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const resultForm = document.getElementById('resultForm');
-			const resultsContainer = document.getElementById('resultsContainer');
+	<!-- input section -->
+	<div class="container bg-dark p-3 mt-5 w-50 rounded">
+		<h4 class="mt-2 text-white text-center">Enter Student's Results</h4>
+		<form action="" id="resulForm">
+			<div class="form-group">
+				<label for="studentName" class="text-white">Student Name</label>
+				<input type="text" class="form-control" id="studentName" aria-describedby="studentName" placeholder="Enter Student Name">
+			</div>
 
-			// Load results from localStorage
-			function loadResults() {
-				const results = JSON.parse(localStorage.getItem('classXResults')) || [];
-				resultsContainer.innerHTML = ''; // Clear previous entries
+			<div class="form-group">
+				<label for="studentMarks" class="text-white">Marks</label>
+				<input type="number" class="form-control" id="studentMarks" aria-describedby="studentMarks" placeholder="Enter Marks">
+			</div>
 
-				results.forEach((res, index) => {
-					const div = document.createElement('div');
-					div.classList.add('result-item');
-					div.textContent = `${index + 1}. ${res.name} - ${res.marks} marks`;
-					resultsContainer.appendChild(div);
-				});
-			}
+			<button type="submit" class="btn btn-outline-warning">Add Results</button>
+		</form>
+	</div>
 
-			// Form submit event
-			resultForm.addEventListener('submit', (e) => {
-				e.preventDefault();
-				const name = document.getElementById('studentName').value.trim();
-				const marks = document.getElementById('studentMarks').value.trim();
+	<!-- result section -->
+	<div class="container bg-warning shadow-lg rounded w-50 mt-3 p-2">
+		<h4 class="text-center mt-2">Results</h4>
+		<div id="resultsContainer" class="mt-2"></div>
+	</div>
 
-				if (!name || !marks) {
-					alert('Please enter both name and marks.');
-					return;
-				}
-
-				// Get existing results
-				const results = JSON.parse(localStorage.getItem('classXResults')) || [];
-				results.push({ name, marks });
-
-				// Save back to localStorage
-				localStorage.setItem('classXResults', JSON.stringify(results));
-
-				// Refresh display
-				loadResults();
-
-				// Reset form
-				resultForm.reset();
-			});
-
-			// Initial load
-			loadResults();
-		});
-	</script>
-
+	<script src="script.js"></script>
 </body>
 
 </html>
